@@ -1,7 +1,12 @@
 const GET_DATA = "GET_DATA"
 
 const initialState = {
-  items: []
+  items: [],
+  media: {
+    "Art": [{type: ".jpg", url: ""}],
+    "Science": [{type: ".pdf", url: ""}],
+    "Literature": [{type: ".mp3", url: ""}, {type: ".pdf", url: ""}]
+  }
 };
 
 export default function(state = initialState, action){

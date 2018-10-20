@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
-import Nav from './Nav';
+import React, { Component } from 'react'
+import Feed from './Feed'
+import Nav from './Nav'
 
 class Home extends Component {
 
@@ -8,13 +9,11 @@ class Home extends Component {
       <div>
         <Nav />
         <div className="home-container">
-
+          <Feed />
         </div>
       </div>
     )
-
   }
-
 }
 
-export default Home;
+export default Home
