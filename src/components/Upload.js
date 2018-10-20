@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-BASE_URL = 'http://localhost:3000/uploads'
+const BASE_URL = 'http://localhost:3000/uploads'
 
 export default class Upload extends Component {
 
@@ -15,7 +15,8 @@ export default class Upload extends Component {
   }
 
   handleSubmit = (e) => {
-    data = new FormData()
+    e.preventDefault()
+    const data = new FormData()
     data.append("file", this.state.file)
 
     fetch(BASE_URL, {

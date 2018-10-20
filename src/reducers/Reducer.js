@@ -3,7 +3,7 @@ const GET_DATA = "GET_DATA"
 const initialState = {
   items: [],
   media: {
-    "Art": [{type: ".jpg", url: ""}],
+    "Art": [{type: ".jpg", url: ""}, {type: ".mp4", url: ""}],
     "Science": [{type: ".pdf", url: ""}],
     "Literature": [{type: ".mp3", url: ""}, {type: ".pdf", url: ""}]
   }
