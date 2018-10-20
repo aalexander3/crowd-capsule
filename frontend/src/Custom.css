@@ -1,3 +1,21 @@
-h1 {
-  color: blue;
+body {
   font-family: helvetica; }
+
+.nav-container {
+  background-color: black;
+  width: 100%;
+  position: fixed;
+  display: inline-block; }
+  .nav-container .item-container {
+    max-width: 1200px;
+    margin: auto; }
+    .nav-container .item-container div {
+      float: right;
+      color: white;
+      margin-right: 20px;
+      margin-top: 15px; }
+    .nav-container .item-container img {
+      color: blue;
+      margin: 10px;
+      height: 30px;
+      width: 30px; }
