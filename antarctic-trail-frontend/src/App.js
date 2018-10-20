@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import 'semantic-ui-css/semantic.min.css';
 import './Custom.scss';
 import { Provider } from 'react-redux';
 import store from './store';
