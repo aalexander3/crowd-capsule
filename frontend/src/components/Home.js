@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Feed from './Feed'
 import Nav from './Nav'
+import SideBar from './SideBar'
 
 class Home extends Component {
 
