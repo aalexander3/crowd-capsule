@@ -1,5 +1,40 @@
 
-  h1{
-    color: blue;
-    font-family: helvetica;
+
+body{
+  font-family: helvetica;
+}
+
+
+.home-container {
+  
+}
+
+
+
+// ========= NAV ==========
+
+.nav-container {
+  background-color: black;
+  width: 100%;
+  position: fixed;
+  display: inline-block;
+  .item-container{
+    max-width: 1200px;
+    margin: auto;
+    div{
+      float: right;
+      color: white;
+      margin-right: 20px;
+      margin-top: 15px;
+    }
+    img{
+      color: blue;
+      margin: 10px;
+      height: 30px;
+      width: 30px;
+    }
+
+
   }
+
+}
