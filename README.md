@@ -1,2 +1,3 @@
-# antarctic-trail
-frozen quest game
+# crowd-capsule
+crowd sourced time capsule for aliens
+
