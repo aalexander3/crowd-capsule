@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 BASE_URL = 'http://localhost:3000/uploads'
 
-export default class CloudinaryTest extends Component {
+export default class Upload extends Component {
 
   state = {
     file: {}

@@ -13,9 +13,9 @@ class App extends Component {
       <Provider store={store}>
         <div className="App">
           <Switch>
-            < Route exact path="/" exact component={ Home }/>
-            < Route path="/aboutearth" exact component={ AboutEarth }/>
-            < Route path="/upload" exact component={ Upload }/>
+            <Route exact path="/" exact component={ Home }/>
+            <Route path="/aboutearth" exact component={ AboutEarth }/>
+            <Route path="/upload" exact component={ Upload }/>
         </Switch>
         </div>
       </Provider>
