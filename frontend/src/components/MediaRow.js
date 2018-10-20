@@ -9,7 +9,7 @@ class MediaRow extends Component {
     })
 
     return (
-      <div className="media-row">
+      <div>
         <h3>{this.props.category}</h3>
         {mediaCells}
       </div>
