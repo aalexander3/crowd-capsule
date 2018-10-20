@@ -12,6 +12,7 @@ state = {
     console.log('sidebar')
     return (
       <div className="sidebar_container">
+        <h1>TEST A THING</h1>
         <Link to={ Upload }>Upload</Link>
         <Link to={ AboutEarth }>About Earth</Link>
         <Link to={ Map }>Map</Link>
