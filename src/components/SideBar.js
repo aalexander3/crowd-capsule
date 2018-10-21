@@ -1,20 +1,25 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import Timer from './Timer'
+import UploadCounter from './UploadCounter'
 
 class SideBar extends Component {
 
-state = {
-}
-
   render() {
-    console.log('sidebar')
     return (
-      <div className="sidebar_container">
+      <div className="sidebar-container">
+        <h1>CROWD CAPSULE</h1>
         <Link to="/">
-          <img src="globe.svg"/>
+          <img src="globe.svg" /> HOME
         </Link>
-        <Link to="/upload">Upload</Link>
-        <Link to="/aboutearth">About Earth</Link>
+        <Link to="/upload">
+          <img src="globe.svg" /> UPLOAD
+        </Link>
+        <Link to="/about-earth">
+          <img src="globe.svg" /> ABOUT EARTH
+        </Link>
+        <Timer />
+        <UploadCounter />
       </div>
     );
   }
