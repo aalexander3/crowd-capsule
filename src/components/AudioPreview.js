@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import image from '../samples/audio.png'
+import {connect} from 'react-redux';
 
 class AudioPreview extends Component {
   state = {
@@ -10,7 +11,10 @@ class AudioPreview extends Component {
     this.setState((prevState) => {
       return {hover: !prevState.hover}
     }, () => {
-      if(this.state.hover){
+      if(this.props.modalClicked){
+        this.audio.pause()
+      }
+      else if(this.state.hover){
         this.audio.currentTime = 0
         this.audio.play()
       }
@@ -19,6 +23,12 @@ class AudioPreview extends Component {
       }
     })
   }
+  //
+  // audioOrVideo = () => {
+  //   if(this.props.type === ".mp3"){
+  //
+  //   }
+  // }
 
   render() {
     return (
@@ -30,4 +40,8 @@ class AudioPreview extends Component {
   }
 }
 
-export default AudioPreview;
+const mapStateToProps = (state) => {
+  return { modalClicked: state.root.feedModalVisible }
+}
+
+export default connect(mapStateToProps)(AudioPreview);

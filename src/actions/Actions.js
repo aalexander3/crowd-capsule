@@ -1,11 +1,18 @@
-const GET_DATA = "GET_DATA"
+import {HANDLE_FEED_CLICK, GET_DATA} from './types.js';
 
-export const getItems = () => {
+export const getItems = (dispatch) => {
   fetch('http://WHATEVERAPI')
   .then(resp => resp.json())
   .then(resp =>
     dispatch({
       type: GET_DATA,
-      payload: res.data
+      payload: resp.data
     }));
+}
+
+export const feedModalVisible = () => {
+  return {
+    type: HANDLE_FEED_CLICK,
+    payload: true
+  }
 }

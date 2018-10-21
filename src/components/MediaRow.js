@@ -11,7 +11,7 @@ class MediaRow extends Component {
     switch(type){
       // you can change these case statements depending on seed data
       case '.mp3':
-        return <AudioPreview url={url} />
+        return <AudioPreview url={url} type={type}/>
       case '.jpg':
         return <ImagePreview url={url} />
       case '.png':
@@ -26,8 +26,8 @@ class MediaRow extends Component {
   }
 
   mediaCells = () => {
-    return this.props.filePreviews(this.props.category).map((media) => {
-      return this.renderSwitch(media.type, media.url)
+    return this.props.filePreviews(this.props.category).map((media, index) => {
+      return this.renderSwitch(media.type, media.url, index)
     })
   }
 

@@ -127,3 +127,6 @@ canvas {
     text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5); }
   .video-audio-thumbnail:hover:before {
     color: #eee; }
+
+#feed-modal {
+  position: absolute; }
