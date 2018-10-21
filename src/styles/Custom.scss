@@ -12,6 +12,13 @@ $green: #90B27B;
 body {
   font-family: helvetica;
 }
+.no-overflow {
+  margin: 0; height: 100%; overflow: hidden;
+  grid-column: 2;
+  grid-row: 1/3;
+  padding: 50px;
+  background: $white;
+}
 
 .app {
   display: grid;

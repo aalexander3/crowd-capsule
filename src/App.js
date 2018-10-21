@@ -13,15 +13,15 @@ class App extends Component {
     return (
 
         <div className="app">
-          {this.props.feedModalVisible ? <FeedModal/> : ""}
           <SideBar />
-          <div className="main-page">
-            <Switch>
-              <Route exact path="/" exact component={ Feed }/>
-              <Route exact path="/about-earth" component={ AboutEarth }/>
-              <Route exact path="/upload" component={ Upload }/>
-            </Switch>
-          </div>
+            <div className={this.props.feedModalVisible ? "no-overflow" : "main-page"}>
+              {this.props.feedModalVisible ? <FeedModal/> : ""}
+              <Switch>
+                <Route exact path="/" exact component={ Feed }/>
+                <Route exact path="/about-earth" component={ AboutEarth }/>
+                <Route exact path="/upload" component={ Upload }/>
+              </Switch>
+            </div>
         </div>
     )
   }
