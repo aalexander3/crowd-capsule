@@ -4,18 +4,18 @@ import AboutEarth from './components/AboutEarth'
 import Upload from './components/Upload'
 import SideBar from './components/SideBar'
 import Feed from './components/Feed'
-import { Route, Switch } from 'react-router-dom'
 import FeedModal from './components/FeedModal'
+import { Route, Switch } from 'react-router-dom'
 import {connect} from 'react-redux';
 
 class App extends Component {
+
   render() {
     return (
-
         <div className="app">
           <SideBar />
-          {this.props.feedModalVisible ? <FeedModal/> : ""}
             <div className={this.props.feedModalVisible ? "no-overflow" : "main-page"}>
+            {this.props.feedModalVisible ? <FeedModal/> : ""}
               <Switch>
                 <Route exact path="/" exact component={ Feed }/>
                 <Route exact path="/about-earth" component={ AboutEarth }/>
