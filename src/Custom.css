@@ -1,6 +1,9 @@
 body {
   font-family: helvetica; }
 
+canvas {
+  max-width: 250px; }
+
 .nav-container {
   background-color: black;
   width: 100%;

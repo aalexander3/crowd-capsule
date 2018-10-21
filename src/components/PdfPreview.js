@@ -1,9 +1,14 @@
 import React, {Component} from 'react';
+import PDF from 'react-pdf-js';
 
 class PdfPreview extends Component {
   render() {
     return (
-      <p>"This is a pdf preview"</p>
+      <PDF
+          file={this.props.url}
+          // onDocumentComplete={this.onDocumentComplete}
+          // page={this.state.page}
+        />
     )
   }
 }

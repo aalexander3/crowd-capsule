@@ -1,9 +1,13 @@
 import React, {Component} from 'react';
+import image from '../samples/audio.png'
 
 class AudioPreview extends Component {
   render() {
     return (
-      <p>"This is an audio preview"</p>
+      <div>
+        <img height="150" width="250" src={image} />
+        <audio src={this.props.url}></audio>
+      </div>
     )
   }
 }

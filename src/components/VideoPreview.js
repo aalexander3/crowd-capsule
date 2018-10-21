@@ -3,7 +3,8 @@ import React, {Component} from 'react';
 class VideoPreview extends Component {
   render() {
     return (
-      <p>"This is a video preview"</p>
+      <video width="250" height="250" src={this.props.url}>
+      </video>
     )
   }
 }
