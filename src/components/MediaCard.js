@@ -36,6 +36,10 @@ class MediaCard extends Component {
     return (
       <div className="media-card">
         {this.renderSwitch(mediaType, mediaUrl)}
+        <div className="data-container">
+          <h1>From Germany</h1>
+          <h2>October 21,2018</h2>
+        </div>
         <div className="like-count-container">
           <a onClick={() => this.handleClick(mediaUrl)} >
             <img src="heart.svg"/>

@@ -4,7 +4,7 @@ import ImagePreview from './Previews/ImagePreview'
 import PdfPreview from './Previews/PdfPreview'
 import VideoPreview from './Previews/VideoPreview'
 import MediaCard from './MediaCard'
-import {connect} from 'react-redux';
+import {connect} from 'react-redux'
 
 class MediaRow extends Component {
 

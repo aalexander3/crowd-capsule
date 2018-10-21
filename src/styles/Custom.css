@@ -144,6 +144,17 @@ i.cloud.upload.icon {
     margin-bottom: 4px; }
   .mediacard-container .media-card {
     background-color: white; }
+    .mediacard-container .media-card .data-container {
+      padding: 10px;
+      width: 100%; }
+      .mediacard-container .media-card .data-container h1, .mediacard-container .media-card .data-container h2 {
+        margin-bottom: 0px;
+        font-size: 13px;
+        font-weight: 200;
+        display: inline-block; }
+      .mediacard-container .media-card .data-container h2 {
+        float: right;
+        margin: 0px; }
     .mediacard-container .media-card .like-count-container {
       margin: 10px; }
       .mediacard-container .media-card .like-count-container img {

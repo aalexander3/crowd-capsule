@@ -181,8 +181,6 @@ i.cloud.upload.icon {
 
 // ============= MEDIA CARD ================
 
-
-
 .mediacard-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -196,6 +194,22 @@ i.cloud.upload.icon {
   }
   .media-card{
     background-color: white;
+
+    .data-container{
+      padding: 10px;
+      width: 100%;
+      h1, h2{
+        margin-bottom: 0px;
+        font-size: 13px;
+        font-weight: 200;
+        display: inline-block;
+      }
+
+      h2{
+        float: right;
+        margin: 0px;
+      }
+    }
     .like-count-container{
       margin: 10px;
       img {
