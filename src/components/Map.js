@@ -79,7 +79,7 @@ class Map extends Component {
               {
                 this.state.cities.map((city, i) => (
                   <Marker key={i} marker={city}>
-                    <circle onMouseEnter={() => this.props.hover(city)} onMouseLeave={this.props.leave}
+                    <circle onMouseEnter={() => this.props.hover(city)}
                       cx={0}
                       cy={0}
                       r={this.cityScale(city.count)}

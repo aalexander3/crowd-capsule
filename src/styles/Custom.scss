@@ -238,9 +238,14 @@ i.cloud.upload.icon {
 }
 
 .mediacard-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 20px;
+  display: flex;
+  // grid-template-columns: repeat(4, 1fr);
+  // grid-gap: 20px;
+  flex-direction: row;
+
+
+  height: 30vh;
+  overflow-x: scroll;
 
   div {
     // background-color: $blue;
@@ -251,6 +256,8 @@ i.cloud.upload.icon {
     margin-bottom: 4px;
   }
   .media-card {
+    width: 250px;
+    margin: 0 1.5rem;
     background-color: white;
   }
 
@@ -279,4 +286,10 @@ i.cloud.upload.icon {
   span{
     padding-left: 5px;
   }
+}
+
+// ================== EARTH ==============
+
+.earth-paragraph {
+  height: 40vh;
 }

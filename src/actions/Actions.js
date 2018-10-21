@@ -1,12 +1,12 @@
-import { UploadAdapter } from '../adapters/UploadAdapter'
+import { UploadAdapter, CategoryAdapter } from '../adapters/UploadAdapter'
 import { HANDLE_FEED_CLICK, GET_DATA } from './types.js';
 
 export const getUploads = () => {
   return dispatch => {
-    return UploadAdapter.index()
+    return CategoryAdapter.index()
       .then(resp =>
         dispatch({
-          type: 'GET_UPLOADS',
+          type: 'GET_CATEGORIES',
           payload: resp
         }))
       }

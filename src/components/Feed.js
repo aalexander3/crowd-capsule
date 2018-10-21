@@ -7,7 +7,7 @@ class Feed extends Component {
 
   mediaRows = () => {
     return this.props.categories.map((category) => {
-      return <MediaRow key={category} category={category}/>
+      return <MediaRow key={category.id} category={category} />
     })
   }
 
@@ -24,7 +24,7 @@ class Feed extends Component {
 const mapStateToProps = (state) => {
   return {
     feedModalVisible: state.root.feedModalVisible,
-    categories: Object.keys(state.root.media)
+    categories: state.root.media
   }
 }
 
