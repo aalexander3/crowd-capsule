@@ -2,10 +2,9 @@ import video from '../samples/small.mp4';
 import song from '../samples/prayer.mp3'
 import pdf from '../samples/pdf.pdf'
 import image from '../samples/image.jpg'
-const GET_DATA = "GET_DATA"
 
 const initialState = {
-  items: [],
+  uploads: [],
   media: {
     "Art": [
       {type: ".jpg", url: image, user: {}},
@@ -24,10 +23,15 @@ const initialState = {
 
 export default function(state = initialState, action){
   switch(action.type){
-    case GET_DATA:
+    case 'GET_UPLOADS':
       return {
         ...state,
-        items: action.payload
+        uploads: [...state.uploads, ...action.payload ]
+      }
+    case 'ADD_UPLOAD':
+      return {
+        ...state,
+        uploads: [...state.uploads, action.payload]
       }
     default:
       return state;

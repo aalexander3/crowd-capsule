@@ -16,7 +16,7 @@ class SideBar extends Component {
           <img src="globe.svg" /> UPLOAD
         </Link>
         <Link to="/about-earth">
-          <img src="globe.svg" /> ABOUT EARTH
+          <img src="globe.svg" /> EARTH
         </Link>
         <Timer />
         <UploadCounter />
