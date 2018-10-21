@@ -8,11 +8,26 @@ class FeedModal extends Component {
     this.props.sendClose()
   }
 
+  renderMedia = () => {
+    switch(this.props.type){
+      case '.mp4':
+        return <video controls autoPlay src={this.props.url}/>
+      case '.jpg':
+        return <img src={this.props.url}/>
+      case '.png':
+        return <img src={this.props.url}/>
+      case '.mp3':
+        return <audio controls autoplay src={this.props.url}/>
+      default:
+        return ""
+    }
+  }
+
   render(){
     return (
       <Fragment>
         <div id="feed-modal">
-          <video controls autoPlay src={this.props.url}/>
+          {this.renderMedia()}
           <button onClick={this.handleClick} id="close-button">Go Back</button>
         </div>
       </Fragment>
@@ -22,7 +37,8 @@ class FeedModal extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    url: state.root.feedModalVisible
+    url: state.root.feedModalVisible.url,
+    type: state.root.feedModalVisible.type
   }
 }
 

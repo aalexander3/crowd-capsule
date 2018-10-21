@@ -2,6 +2,8 @@ import React, {Component} from 'react'
 import AudioPreview from './Previews/AudioPreview'
 import ImagePreview from './Previews/ImagePreview'
 import VideoPreview from './Previews/VideoPreview'
+import {connect} from 'react-redux';
+import { feedModalVisible } from '../actions/Actions';
 
 class MediaCard extends Component {
 
@@ -11,7 +13,10 @@ class MediaCard extends Component {
 
 
   handleClick = (url) => {
+  }
 
+  handleMediaClick = () => {
+    this.props.sendClick(this.props.mediaUrl, this.props.mediaType);
   }
 
   renderSwitch = (type, url) => {
@@ -35,7 +40,9 @@ class MediaCard extends Component {
     const {mediaUrl, mediaType } = this.props
     return (
       <div className="media-card">
-        {this.renderSwitch(mediaType, mediaUrl)}
+        <div onClick={this.handleMediaClick}>
+          {this.renderSwitch(mediaType, mediaUrl)}
+        </div>
         <div className="data-container">
           <h1>From Germany</h1>
           <h2>October 21,2018</h2>
@@ -53,4 +60,10 @@ class MediaCard extends Component {
 
 }
 
-export default MediaCard;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    sendClick: (url, type) => dispatch(feedModalVisible(url, type))
+  }
+}
+
+export default connect(null, mapDispatchToProps)(MediaCard);

@@ -179,8 +179,11 @@ i.cloud.upload.icon {
   top: 10vh;
   left: 30vw;
   right: 20vw; }
-  #feed-modal video {
+  #feed-modal video, #feed-modal image {
     width: 55vw; }
+  #feed-modal audio {
+    width: 55vw;
+    margin-top: 30vh; }
 
 #close-button {
   font-size: 20px;

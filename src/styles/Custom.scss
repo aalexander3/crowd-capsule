@@ -230,9 +230,15 @@ i.cloud.upload.icon {
   position: absolute;
   top: 10vh; left: 30vw; right: 20vw;
 
-  video {
+  video, image {
     width: 55vw;
   }
+
+  audio {
+    width: 55vw;
+    margin-top: 30vh;
+  }
+
 }
 
 #close-button{

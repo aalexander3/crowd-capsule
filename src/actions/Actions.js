@@ -23,10 +23,10 @@ export const postUploads = (data) => {
     }
 }
 
-export const feedModalVisible = (url) => {
+export const feedModalVisible = (url, type) => {
   return {
     type: HANDLE_FEED_CLICK,
-    payload: url
+    payload: {url: url, type: type}
   }
 }
 
