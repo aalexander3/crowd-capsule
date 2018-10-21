@@ -7,7 +7,6 @@ class Nav extends Component {
       <div className="nav-container">
         <div className="item-container">
             <img src="globe.svg" />
-
             <div>Uploads</div>
             <div>Timer</div>
         </div>

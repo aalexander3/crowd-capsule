@@ -1,25 +1,42 @@
 
 
-body{
+body {
   font-family: helvetica;
 }
 
+.app {
+  display: grid;
+  grid-template-columns: 20vw 80vw;
+  grid-template-rows: 8vh 92vh;
+
 canvas {
-    max-width: 250px;
+  max-width: 250px;
 }
 
-.home-container {
-
+.app {
+  display: grid;
+  grid-template-columns: 20vw 80vw;
+  grid-template-rows: 8vh 92vh;
 }
 
+.sidebar_container {
+  grid-column: 1;
+  grid-row: 2;
+  background-color: green;
+}
 
-
+.main-page {
+  grid-column: 2;
+  grid-row: 2;
+  background-color: magenta;
+}
 // ========= NAV ==========
 
 .nav-container {
   background-color: black;
   width: 100%;
-  position: fixed;
+  grid-column: 1/3;
+  grid-row: 1;
   display: inline-block;
   .item-container{
     max-width: 1200px;
