@@ -185,7 +185,10 @@ i.cloud.upload.icon {
 #close-button {
   position: absolute;
   left: 30vw;
-  bottom: 15vh; }
+  bottom: 15vh;
+  height: 50px;
+  width: 200px;
+  border-radius: 5px; }
 
 .mediacard-container {
   display: grid;

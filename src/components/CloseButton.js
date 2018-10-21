@@ -1,11 +1,21 @@
 import React, {Component} from 'react';
+import { connect } from 'react-redux';
+import {sendCloseClick} from '../actions/Actions'
 
 class CloseButton extends Component {
+  handleClick = () => {
+    this.props.sendClose()
+  }
+
   render(){
     return(
-      <button id="close-button">Go Back</button>
+      <button onClick={this.handleClick} id="close-button">Go Back</button>
     )
   }
 }
 
-export default CloseButton;
+const mapDispatchToProps = (dispatch) => {
+  return { sendClose: () => dispatch(sendCloseClick())}
+}
+
+export default connect(null, mapDispatchToProps)(CloseButton);

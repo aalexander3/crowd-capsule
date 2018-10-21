@@ -1,5 +1,5 @@
 import { UploadAdapter } from '../adapters/UploadAdapter'
-import { HANDLE_FEED_CLICK, GET_DATA } from './types.js';
+import { HANDLE_FEED_CLICK, GET_DATA, HANDLE_CLOSE_CLICK } from './types.js';
 
 export const getUploads = () => {
   return dispatch => {
@@ -27,5 +27,12 @@ export const feedModalVisible = (url) => {
   return {
     type: HANDLE_FEED_CLICK,
     payload: url
+  }
+}
+
+export const sendCloseClick = () => {
+  return {
+    type: HANDLE_CLOSE_CLICK,
+    payload: null
   }
 }
