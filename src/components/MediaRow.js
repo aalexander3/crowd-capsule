@@ -25,15 +25,18 @@ class MediaRow extends Component {
     }
   }
 
-  render(){
-    const mediaCells = this.props.filePreviews(this.props.category).map((media) => {
+  mediaCells = () => {
+    return this.props.filePreviews(this.props.category).map((media) => {
       return this.renderSwitch(media.type, media.url)
     })
+  }
+
+  render(){
 
     return (
       <Fragment>
         <h3>{this.props.category}</h3>
-        {mediaCells}
+        {this.mediaCells()}
       </Fragment>
     )
   }
