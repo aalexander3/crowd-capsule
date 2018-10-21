@@ -10,6 +10,9 @@ state = {
     console.log('sidebar')
     return (
       <div className="sidebar_container">
+        <Link to="/">
+          <img src="globe.svg"/>
+        </Link>
         <Link to="/upload">Upload</Link>
         <Link to="/aboutearth">About Earth</Link>
       </div>

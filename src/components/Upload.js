@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import '../styles/Upload.css'
 import { Icon, Form, Button, Input } from 'semantic-ui-react'
 
 const BASE_URL = 'http://localhost:3000/uploads'
