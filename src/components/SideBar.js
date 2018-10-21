@@ -10,10 +10,10 @@ class SideBar extends Component {
       <div className="sidebar-container">
         <h1>CROWD CAPSULE</h1>
         <Link to="/">
-          <img src="globe.svg" /> HOME
+          <img src="home.svg" /> HOME
         </Link>
         <Link to="/upload">
-          <img src="globe.svg" /> UPLOAD
+          <img src="upload2.svg" /> UPLOAD
         </Link>
         <Link to="/about-earth">
           <img src="globe.svg" /> EARTH
