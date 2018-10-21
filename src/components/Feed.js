@@ -22,7 +22,7 @@ class Feed extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    categories: ["Art", "Science", "Literature"]
+    categories: Object.keys(state.root.media)
   }
 }
 
