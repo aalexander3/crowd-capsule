@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
+import LangDropDown from './LangDropDown'
 
 class Nav extends Component {
 
@@ -6,7 +8,10 @@ class Nav extends Component {
     return (
       <div className="nav-container">
         <div className="item-container">
-            <img src="globe.svg" />
+          <Link to="/">
+            <img src="globe.svg"/>
+          </Link>
+            <LangDropDown />
             <div>Uploads</div>
             <div>Timer</div>
         </div>
