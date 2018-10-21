@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import playButton from '../samples/play_button.png';
 
 class VideoPreview extends Component {
   state = {
@@ -21,7 +22,7 @@ class VideoPreview extends Component {
 
   render() {
     return (
-      <div>
+      <div className="video-thumbnail">
         <video width="250" height="250" src={this.props.url} ref={(video) => { this.video = video } } onMouseEnter={this.handleHover} onMouseLeave={this.handleHover}/>
       </div>
     )
