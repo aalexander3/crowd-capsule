@@ -173,13 +173,38 @@ canvas {
   max-width: 250px;
 }
 
+.video-thumbnail {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  padding: 0px;
+  margin: 0px;
+
+}
+.video-thumbnail video {
+  object-fit: fill;
+}
+
+.video-thumbnail:before {
+  position: absolute;
+  top: 50%;
+}
+
+i.cloud.upload.icon {
+  text-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5);
+}
+
+.video-thumbnail:hover:before {
+  color: #eee;
+}
+
 .video-audio-thumbnail {
   position: relative;
   display: inline-block;
   cursor: pointer;
   padding: 0px;
   margin: 0px;
-  video{
+  video {
     object-fit: fill;
   }
 
@@ -221,40 +246,42 @@ canvas {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
-  div{
+
+  div {
     // background-color: $blue;
     display: inline-block;
   }
+}
   .img-fix {
     margin-bottom: 4px;
   }
-  .media-card{
+  .media-card {
     background-color: white;
+  }
 
-    .data-container{
-      padding: 10px;
-      width: 100%;
-      h1, h2{
-        margin-bottom: 0px;
-        font-size: 13px;
-        font-weight: 200;
-        display: inline-block;
-      }
+.data-container{
+  padding: 10px;
+  width: 100%;
+  h1, h2{
+    margin-bottom: 0px;
+    font-size: 13px;
+    font-weight: 200;
+    display: inline-block;
+  }
 
-      h2{
-        float: right;
-        margin: 0px;
-      }
-    }
-    .like-count-container{
-      margin: 10px;
-      img {
-        height: 20px;
-        width: 20px;
-      }
-      span{
-        padding-left: 5px;
-      }
-    }
+  h2{
+    float: right;
+    margin: 0px;
+  }
+}
+
+.like-count-container {
+  margin: 10px;
+  img {
+    height: 20px;
+    width: 20px;
+  }
+  span{
+    padding-left: 5px;
   }
 }

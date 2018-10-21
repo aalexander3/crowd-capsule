@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import playButton from '../../samples/play_button.png';
 import {connect} from 'react-redux';
-import {feedModalVisible} from '../../actions/Actions';
+import { feedModalVisible } from '../../actions/Actions';
 
 class VideoPreview extends Component {
   state = {
@@ -33,9 +33,9 @@ class VideoPreview extends Component {
   render() {
     return (
       <div className={ this.props.modalClicked || this.state.hover ? "" : "video-audio-thumbnail" }>
-        <video width="150" height="250" src={this.props.url} ref={(video) => { this.video = video } }
-        onMouseEnter={this.handleHover} onMouseLeave={this.handleHover}
-        onClick={this.handleClick}/>
+        <video width="250" height="150" src={this.props.url} ref={(video) => { this.video = video } }
+          onMouseEnter={this.handleHover} onMouseLeave={this.handleHover}
+          onClick={this.handleClick}/>
       </div>
     )
   }
