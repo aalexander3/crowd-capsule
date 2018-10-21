@@ -13,8 +13,7 @@ canvas {
 .video-thumbnail {
   position: relative;
   display: inline-block;
-  cursor: pointer;
-  margin: 30px; }
+  cursor: pointer; }
   .video-thumbnail:before {
     position: absolute;
     top: 50%;
