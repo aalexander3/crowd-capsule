@@ -3,24 +3,29 @@ body {
 
 canvas {
     max-width: 250px; }
-    
+
   .app {
     display: grid;
     grid-template-columns: 20vw 80vw;
     grid-template-rows: 8vh 92vh; }
 
-  .sidebar_container {
-    grid-column: 1;
-    grid-row: 2;
-    background-color: green; }
+.sidebar_container {
+  padding-top: 20px;
+  grid-column: 1;
+  grid-row: 2;
+  -webkit-box-shadow: 10px 0 5px -2px #A9A9A9;
+  box-shadow: 10px 0 5px -2px #A9A9A9; }
+  .sidebar_container a {
+    display: block; }
 
-  .main-page {
-    grid-column: 2;
-    grid-row: 2;
-    background-color: magenta; }
+.main-page {
+  grid-column: 2;
+  grid-row: 2;
+  padding: 50px; }
 
 .nav-container {
   background-color: black;
+  position: absolute;
   width: 100%;
   grid-column: 1/3;
   grid-row: 1;
