@@ -1,4 +1,4 @@
-// @import '~antd/dist/antd.css';
+@import '~antd/dist/antd.css';
 // COLOR SCHEME
 
 $blue: #669AA5;
@@ -67,62 +67,82 @@ body {
   background: $white;
 }
 
-
 // =========== UPLOAD ==============
 
 .upload {
-  padding: 6rem;
+  padding: 3rem;
+  border: 1px solid $blue;
+  background-color: #E9EAE8;
+  width: 32rem;
 }
 
 .form {
   display: flex;
+  flex-direction: column;
+
 }
 
 .submit {
   position: relative;
-  border: 1px solid rgba(34,36,38,.15);
-  border-radius: 5px;
+  border: 1px solid rgba(255,255,255,.2);
+  border-radius: .28571429rem;
   height: 2rem;
   width: max-content;
-  color: black;
-  margin: 3px;
-}
-
-.submit:hover {
-  background-color: whitesmoke;
-  border: 1px solid rgba(34,36,38,.15);
-  color: black;
-}
-
-.input-text {
-  border-radius: 5px;
-  height: 2rem;
-  width: 60%;
-  margin: 3px;
-}
-
-.upload-label {
-  border-radius: 5px;
-  height: 2rem;
-  width: 60%;
-  margin: 3px;
-  display: inline-block;
-  max-width: 100%;
-  padding: .67857143em 1em;
-  background: #fff;
-  border: 1px solid rgba(34,36,38,.15);
-  border-radius: .28571429rem;
-  transition: background .3s;
+  color: $white;
+  margin: .5rem 0;
+  height: 3rem;
+  width: 8rem;
+  background: $hover;
 
   &:hover {
-    cursor: pointer;
-    background: lightgrey;
+    border: 1px solid $blue;
+    color: $white;
+    box-shadow: 0 0 0 3px rgba(24, 144, 255, 0.2);
+    border-right-width: 1px !important;
   }
 }
 
-i.cloud.upload.icon {
-  display: inline;
-  height: 10px;
+.text-upload {
+  width: 24rem;
+  border-radius: .28571429rem;
+
+  &:hover {
+    border: 1px solid $blue;
+    box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+    border-right-width: 1px !important;
+  }
+  &:active {
+    border: 1px solid $blue;
+    box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+    border-right-width: 1px !important;
+  }
+}
+
+.upload-label {
+  width: 8rem;
+  height: 8rem;
+  margin: .5rem 0;
+  display: flex;
+  max-width: 100%;
+  padding: .67857143em 1em;
+  background: #fff;
+  border: 1px dashed $blue;
+  border-radius: .28571429rem;
+  transition: background .3s;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+    border-right-width: 1px !important;
+  }
+}
+
+.upload-preview {
+  width: 7rem;
+  height: 7rem;
 }
 
 .upload-input {
