@@ -8,6 +8,7 @@ import Feed from './components/Feed'
 import { Route, Switch } from 'react-router-dom'
 import { withRouter } from 'react-router'
 import { getUploads } from './actions/Actions'
+import FeedModal from './components/FeedModal'
 
 class App extends Component {
   componentDidMount(){
@@ -16,18 +17,25 @@ class App extends Component {
 
   render() {
     return (
-      <div className="app">
-        <SideBar />
-        <div className="main-page">
-          <Switch>
-            <Route exact path="/" exact component={ Feed }/>
-            <Route exact path="/about-earth" component={ AboutEarth }/>
-            <Route exact path="/upload" render={() => <Upload {...this.props} /> }/>
-          </Switch>
+
+        <div className="app">
+          <SideBar />
+          {this.props.feedModalVisible ? <FeedModal/> : ""}
+            <div className={this.props.feedModalVisible ? "no-overflow" : "main-page"}>
+              <Switch>
+                <Route exact path="/" exact component={ Feed }/>
+                <Route exact path="/about-earth" component={ AboutEarth }/>
+                <Route exact path="/upload" render={() => <Upload {...this.props} /> }/>
+              </Switch>
+            </div>
         </div>
-      </div>
     )
   }
 }
+const mapStateToProps = (state) => {
+  return {
+    feedModalVisible: state.root.feedModalVisible,
+  }
+}
 
-export default withRouter(connect(null, { getUploads })(App))
+export default withRouter(connect(mapStateToProps, { getUploads })(App))
