@@ -3,9 +3,18 @@ const GET_DATA = "GET_DATA"
 const initialState = {
   items: [],
   media: {
-    "Art": [{type: ".jpg", url: ""}, {type: ".mp4", url: ""}],
-    "Science": [{type: ".pdf", url: ""}],
-    "Literature": [{type: ".mp3", url: ""}, {type: ".pdf", url: ""}]
+    "Art": [
+      {type: ".jpg", url: "https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492_1280.jpg", user: {}},
+      {type: ".mp4", url: "", user: {}}
+    ],
+    "Science": [
+      {type: ".pdf", url: "", user: {}},
+      {type: ".png", url: "https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492_1280.jpg", user: {}}
+    ],
+    "Literature": [
+      {type: ".mp3", url: "", user: {}},
+      {type: ".pdf", url: "", user: {}}
+    ]
   }
 };
 
