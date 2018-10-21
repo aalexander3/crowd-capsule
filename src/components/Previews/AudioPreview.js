@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import image from '../samples/audio.png'
+import image from '../../samples/audio.png'
 
 class AudioPreview extends Component {
   state = {
