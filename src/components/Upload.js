@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import '../styles/Upload.css'
 
 const BASE_URL = 'http://localhost:3000/uploads'
 
@@ -28,7 +29,7 @@ export default class Upload extends Component {
 
   render(){
     return (
-      <div>
+      <div className="upload" >
         <form onSubmit={this.handleSubmit}>
           <input
             onChange={this.uploadImage}
@@ -37,8 +38,6 @@ export default class Upload extends Component {
           />
           <input type='submit' />
         </form>
-
-
       </div>
     )
   }
