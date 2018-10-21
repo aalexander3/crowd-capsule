@@ -41,7 +41,8 @@
     background: lightgrey; }
 
 i.cloud.upload.icon {
-  display: inline; }
+  display: inline;
+  height: 10px; }
 
 .upload-input {
   position: absolute;

@@ -1,13 +1,18 @@
 body {
   font-family: helvetica; }
 
-canvas {
-    max-width: 250px; }
+.app {
+  display: grid;
+  grid-template-columns: 20vw 80vw;
+  grid-template-rows: 8vh 92vh; }
 
-  .app {
-    display: grid;
-    grid-template-columns: 20vw 80vw;
-    grid-template-rows: 8vh 92vh; }
+canvas {
+  max-width: 250px; }
+
+.app {
+  display: grid;
+  grid-template-columns: 20vw 80vw;
+  grid-template-rows: 8vh 92vh; }
 
 .sidebar_container {
   padding-top: 20px;
@@ -21,7 +26,8 @@ canvas {
 .main-page {
   grid-column: 2;
   grid-row: 2;
-  padding: 50px; }
+  padding: 50px;
+  overflow-y: scroll; }
 
 .nav-container {
   background-color: black;
