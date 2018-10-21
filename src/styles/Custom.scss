@@ -20,7 +20,7 @@ body {
   grid-row: 1/3;
   padding: 50px 20px;
   background: $black;
-  opacity: 0.5;
+  opacity: 0.3;
 }
 
 .app {
@@ -236,9 +236,10 @@ i.cloud.upload.icon {
 }
 
 #close-button{
+  font-size: 20px;
   position: absolute;
-  left: 30vw; bottom: 15vh;
-  height: 50px; width: 200px;
+  left: 30vw; bottom: 10vh;
+  height: 70px; width: 300px;
   border-radius: 5px;
 }
 
