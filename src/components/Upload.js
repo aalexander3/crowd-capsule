@@ -1,14 +1,21 @@
 import React, { Component } from 'react'
 import { Icon, Form, Button, Input } from 'semantic-ui-react'
+import { connect } from 'react-redux'
+// import { UploadAdapter } from '../adapters/UploadAdapter'
+import { getUploads, postUploads } from '../actions/Actions'
 
 const BASE_URL = 'http://localhost:3000/uploads'
 
-export default class Upload extends Component {
+class Upload extends Component {
 
   // caption must be less than 140 characters
   state = {
     file: null,
     caption: ''
+  }
+
+  componentDidMount(){
+    this.props.getUploads()
   }
 
   uploadImage = (e) => {
@@ -25,12 +32,7 @@ export default class Upload extends Component {
     data.append("caption", this.state.caption)
 
     if (this.state.file) {
-      fetch(BASE_URL, {
-        method: "POST",
-        body: data
-      })
-      .then(res => res.json())
-      .then(console.log)
+      this.props.postUploads(data)
     }
   }
 
@@ -70,3 +72,6 @@ export default class Upload extends Component {
     )
   }
 }
+
+
+export default connect(null, { getUploads, postUploads })(Upload)

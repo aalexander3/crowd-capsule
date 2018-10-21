@@ -1,17 +1,19 @@
-import React, { Component } from 'react'
+import React from 'react'
+import { connect } from 'react-redux'
 
-export default class UploadCounter extends Component {
+const UploadCounter = props => {
 
-  state = {
-    uploadCount: 0
-  }
+  return(
+    <div>
+      <h3>Number of worldwide uploads: {props.count}</h3>
+    </div>
+  )
+}
 
-
-  render(){
-    return(
-      <div>
-        <h3>Number of worldwide uploads: {this.state.uploadCount}</h3>
-      </div>
-    )
+const mapStateToProps = state => {
+  return {
+    count: state.root.uploads.length
   }
 }
+
+export default connect(mapStateToProps)(UploadCounter)
