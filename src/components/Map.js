@@ -18,8 +18,8 @@ const wrapperStyles = {
 
 class Map extends Component {
 
-  state={
-    cities: [],
+  state = {
+    locations: [],
     highestCount: 0
   }
 
@@ -77,7 +77,7 @@ class Map extends Component {
             </Geographies>
             <Markers>
               {
-                this.state.cities.map((city, i) => (
+                this.state.locations.map((city, i) => (
                   <Marker key={i} marker={city}>
                     <circle onMouseEnter={() => this.props.hover(city)}
                       cx={0}

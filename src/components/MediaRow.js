@@ -9,7 +9,7 @@ class MediaRow extends Component {
 
   mediaCells = () => {
     return this.props.category.uploads.map((media, index) => {
-      return <MediaCard mediaType={media.path.slice(-4)} mediaUrl={media.path} />
+      return <MediaCard mediaType={media.path.slice(-4)} upload={media}/>
     })
   }
 

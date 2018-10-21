@@ -5,13 +5,8 @@ import VideoPreview from './Previews/VideoPreview'
 
 class MediaCard extends Component {
 
-  state = {
-    likeCount: 0
-  }
-
-
-  handleClick = (url) => {
-
+  handleClick = (id) => {
+    // fetch here
   }
 
   renderSwitch = (type, url) => {
@@ -32,19 +27,20 @@ class MediaCard extends Component {
 
 
   render() {
-    const {mediaUrl, mediaType } = this.props
+    const { mediaType } = this.props
+    const { path, upvotes, location_name, id} = this.props.upload
     return (
       <div className="media-card">
-        {this.renderSwitch(mediaType, mediaUrl)}
+        {this.renderSwitch(mediaType, path)}
         <div className="data-container">
-          <h1>From Germany</h1>
+          <h1>From {location_name}</h1>
           <h2>October 21,2018</h2>
         </div>
         <div className="like-count-container">
-          <a onClick={() => this.handleClick(mediaUrl)} >
+          <a onClick={() => this.handleClick(id)} >
             <img src="heart.svg"/>
           </a>
-          <span>33</span>
+          <span>{upvotes}</span>
         </div>
       </div>
     )
