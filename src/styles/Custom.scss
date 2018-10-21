@@ -19,12 +19,6 @@ body {
   grid-template-rows: 8vh 92vh;
 }
 
-.app {
-  display: grid;
-  grid-template-columns: 20vw 80vw;
-  grid-template-rows: 8vh 92vh;
-}
-
 .sidebar-container {
   grid-column: 1;
   grid-row: 1/3;
