@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import playButton from '../samples/play_button.png';
+import playButton from '../../samples/play_button.png';
 import {connect} from 'react-redux';
-import {feedModalVisible} from '../actions/Actions';
+import { feedModalVisible } from '../../actions/Actions';
 
 class VideoPreview extends Component {
   state = {
