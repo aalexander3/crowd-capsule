@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import image from '../samples/audio.png'
+import image from '../../samples/audio.png'
 import {connect} from 'react-redux';
 
 class AudioPreview extends Component {

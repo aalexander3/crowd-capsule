@@ -20,7 +20,7 @@ body {
   grid-row: 1/3;
   padding: 50px;
   background: $black;
-  opacity: 0.1;
+  opacity: 0.5;
 }
 
 .app {
@@ -201,16 +201,21 @@ canvas {
   }
 }
 
-
-// ============= MEDIA CARD ================
 #feed-modal {
   position: absolute;
-  top: 20vh; left: 30vw; right: 20vw;
-  
+  top: 10vh; left: 30vw; right: 20vw;
+
   video {
-    height: 55vh;
+    height: 65vh;
   }
 }
+
+#close-button{
+  position: absolute;
+  left: 30vw; bottom: 15vh;
+}
+
+// ============= MEDIA CARD ================
 
 .mediacard-container {
   display: grid;
