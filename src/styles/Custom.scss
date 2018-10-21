@@ -231,7 +231,7 @@ i.cloud.upload.icon {
   top: 10vh; left: 30vw; right: 20vw;
 
   video, image {
-    width: 55vw;
+    width: 60vw;
   }
 
   audio {
@@ -239,14 +239,18 @@ i.cloud.upload.icon {
     margin-top: 30vh;
   }
 
+  p {
+    font-size: 50px;
+  }
+
 }
 
 #close-button{
-  font-size: 20px;
-  position: relative;
-  height: 7vh; width: 55vw;
-  border: 2px solid $black;
+  position: fixed;
+  top: 1vw; right: 1vw;
+  height: 10vh;
   border-radius: 5px;
+  border: 2px solid $black;
 }
 
 // ============= MEDIA CARD ================

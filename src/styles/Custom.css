@@ -180,18 +180,20 @@ i.cloud.upload.icon {
   left: 30vw;
   right: 20vw; }
   #feed-modal video, #feed-modal image {
-    width: 55vw; }
+    width: 60vw; }
   #feed-modal audio {
     width: 55vw;
     margin-top: 30vh; }
+  #feed-modal p {
+    font-size: 50px; }
 
 #close-button {
-  font-size: 20px;
-  position: relative;
-  height: 7vh;
-  width: 55vw;
-  border: 2px solid #000000;
-  border-radius: 5px; }
+  position: fixed;
+  top: 1vw;
+  right: 1vw;
+  height: 10vh;
+  border-radius: 5px;
+  border: 2px solid #000000; }
 
 .mediacard-container {
   display: grid;

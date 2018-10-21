@@ -1,6 +1,7 @@
 import React, {Component, Fragment} from 'react';
 import {connect} from 'react-redux';
 import {sendCloseClick} from '../actions/Actions'
+import closeButton from '../samples/close.svg'
 
 class FeedModal extends Component {
 
@@ -19,7 +20,7 @@ class FeedModal extends Component {
       case '.mp3':
         return <audio controls autoplay src={this.props.url}/>
       default:
-        return ""
+        return <p>{"We can't find this file. 😢"}</p>
     }
   }
 
@@ -28,7 +29,7 @@ class FeedModal extends Component {
       <Fragment>
         <div id="feed-modal">
           {this.renderMedia()}
-          <button onClick={this.handleClick} id="close-button">Go Back</button>
+          <img src={closeButton} onClick={this.handleClick} id="close-button"/>
         </div>
       </Fragment>
     )
