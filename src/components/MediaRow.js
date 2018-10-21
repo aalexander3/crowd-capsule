@@ -1,9 +1,10 @@
 import React, {Component, Fragment} from 'react'
-import AudioPreview from './AudioPreview'
-import ImagePreview from './ImagePreview'
-import PdfPreview from './PdfPreview'
-import VideoPreview from './VideoPreview'
-import {connect} from 'react-redux';
+import AudioPreview from './Previews/AudioPreview'
+import ImagePreview from './Previews/ImagePreview'
+import PdfPreview from './Previews/PdfPreview'
+import VideoPreview from './Previews/VideoPreview'
+import MediaCard from './MediaCard'
+import {connect} from 'react-redux'
 
 class MediaRow extends Component {
 
@@ -36,7 +37,9 @@ class MediaRow extends Component {
     return (
       <Fragment>
         <h3>{this.props.category}</h3>
-        {this.mediaCells()}
+        <div className="mediacard-container">
+          {this.mediaCells()}
+        </div>
       </Fragment>
     )
   }

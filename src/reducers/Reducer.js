@@ -6,7 +6,7 @@ import {HANDLE_FEED_CLICK, GET_DATA} from '../actions/types.js';
 
 
 const initialState = {
-  items: [],
+  uploads: [],
   feedModalVisible: null,
   media: {
     "Art": [
@@ -26,10 +26,15 @@ const initialState = {
 
 export default function(state = initialState, action){
   switch(action.type){
-    case GET_DATA:
+    case 'GET_UPLOADS':
       return {
         ...state,
-        items: action.payload
+        uploads: [...state.uploads, ...action.payload ]
+      }
+    case 'ADD_UPLOAD':
+      return {
+        ...state,
+        uploads: [...state.uploads, action.payload]
       }
     case HANDLE_FEED_CLICK:
       return {

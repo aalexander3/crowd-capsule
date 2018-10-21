@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url(~antd/dist/antd.css);
 body {
   font-family: helvetica; }
 
@@ -15,11 +16,6 @@ body {
 .app {
   display: grid;
   grid-template-columns: 25vw 75vw;
-  grid-template-rows: 8vh 92vh; }
-
-.app {
-  display: grid;
-  grid-template-columns: 20vw 80vw;
   grid-template-rows: 8vh 92vh; }
 
 .sidebar-container {
@@ -55,55 +51,71 @@ body {
 .main-page {
   grid-column: 2;
   grid-row: 1/3;
-  padding: 50px;
+  padding: 50px 20px;
   overflow-y: scroll;
   background: #F6F7F4; }
 
 .upload {
-  padding: 6rem; }
+  padding: 3rem;
+  border: 1px solid #669AA5;
+  background-color: #E9EAE8;
+  width: 32rem; }
 
 .form {
-  display: flex; }
+  display: flex;
+  flex-direction: column; }
 
 .submit {
   position: relative;
-  border: 1px solid rgba(34, 36, 38, 0.15);
-  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: .28571429rem;
   height: 2rem;
   width: max-content;
-  color: black;
-  margin: 3px; }
+  color: #F6F7F4;
+  margin: .5rem 0;
+  height: 3rem;
+  width: 8rem;
+  background: #4A7F89; }
+  .submit:hover {
+    border: 1px solid #669AA5;
+    color: #F6F7F4;
+    box-shadow: 0 0 0 3px rgba(24, 144, 255, 0.2);
+    border-right-width: 1px !important; }
 
-.submit:hover {
-  background-color: whitesmoke;
-  border: 1px solid rgba(34, 36, 38, 0.15);
-  color: black; }
-
-.input-text {
-  border-radius: 5px;
-  height: 2rem;
-  width: 60%;
-  margin: 3px; }
+.text-upload {
+  width: 24rem;
+  border-radius: .28571429rem; }
+  .text-upload:hover {
+    border: 1px solid #669AA5;
+    box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+    border-right-width: 1px !important; }
+  .text-upload:active {
+    border: 1px solid #669AA5;
+    box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+    border-right-width: 1px !important; }
 
 .upload-label {
-  border-radius: 5px;
-  height: 2rem;
-  width: 60%;
-  margin: 3px;
-  display: inline-block;
+  width: 8rem;
+  height: 8rem;
+  margin: .5rem 0;
+  display: flex;
   max-width: 100%;
   padding: .67857143em 1em;
   background: #fff;
-  border: 1px solid rgba(34, 36, 38, 0.15);
+  border: 1px dashed #669AA5;
   border-radius: .28571429rem;
-  transition: background .3s; }
+  transition: background .3s;
+  text-align: center;
+  justify-content: center;
+  align-items: center; }
   .upload-label:hover {
     cursor: pointer;
-    background: lightgrey; }
+    box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+    border-right-width: 1px !important; }
 
-i.cloud.upload.icon {
-  display: inline;
-  height: 10px; }
+.upload-preview {
+  width: 7rem;
+  height: 7rem; }
 
 .upload-input {
   position: absolute;
@@ -115,6 +127,15 @@ i.cloud.upload.icon {
   width: 0;
   height: 100%;
   opacity: 0; }
+
+.video-thumbnail {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  padding: 0px;
+  margin: 0px; }
+  .video-thumbnail video {
+    object-fit: fill; }
 
 canvas {
   max-width: 250px; }
@@ -138,6 +159,7 @@ canvas {
   .video-audio-thumbnail:hover:before {
     color: #eee; }
 
+<<<<<<< HEAD
 #feed-modal {
   position: absolute;
   top: 20vh;
@@ -145,3 +167,33 @@ canvas {
   right: 20vw; }
   #feed-modal video {
     height: 55vh; }
+=======
+.mediacard-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px; }
+  .mediacard-container div {
+    display: inline-block; }
+  .mediacard-container .img-fix {
+    margin-bottom: 4px; }
+  .mediacard-container .media-card {
+    background-color: white; }
+    .mediacard-container .media-card .data-container {
+      padding: 10px;
+      width: 100%; }
+      .mediacard-container .media-card .data-container h1, .mediacard-container .media-card .data-container h2 {
+        margin-bottom: 0px;
+        font-size: 13px;
+        font-weight: 200;
+        display: inline-block; }
+      .mediacard-container .media-card .data-container h2 {
+        float: right;
+        margin: 0px; }
+    .mediacard-container .media-card .like-count-container {
+      margin: 10px; }
+      .mediacard-container .media-card .like-count-container img {
+        height: 20px;
+        width: 20px; }
+      .mediacard-container .media-card .like-count-container span {
+        padding-left: 5px; }
+>>>>>>> master

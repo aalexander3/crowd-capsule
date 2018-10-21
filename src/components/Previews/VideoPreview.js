@@ -33,7 +33,7 @@ class VideoPreview extends Component {
   render() {
     return (
       <div className={ this.props.modalClicked || this.state.hover ? "" : "video-audio-thumbnail" }>
-        <video width="250" height="250" src={this.props.url} ref={(video) => { this.video = video } }
+        <video width="150" height="250" src={this.props.url} ref={(video) => { this.video = video } }
         onMouseEnter={this.handleHover} onMouseLeave={this.handleHover}
         onClick={this.handleClick}/>
       </div>
