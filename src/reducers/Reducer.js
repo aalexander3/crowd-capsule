@@ -4,32 +4,38 @@ import pdf from '../samples/pdf.pdf'
 import image from '../samples/image.jpg'
 import {HANDLE_FEED_CLICK, GET_DATA} from '../actions/types.js';
 
+// Space Art Music Math Science Literature Technology
+// media looks kinda like this [
+//   {
+//     "id": 1,
+//     "name": "Space",
+//     "uploads": [
+//       {
+//         "id": 3,
+//         "path": "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e000763/GSFC_20171208_Archive_e000763~orig.jpg",
+//         "upvotes": 0,
+//         "location_id": 26,
+//         "user": {
+//           "id": 1,
+//           "username": "Admin"
+//         }
+//       },
+//       {...}
+// ]
+
 
 const initialState = {
   uploads: [],
   feedModalVisible: null,
-  media: {
-    "Art": [
-      {type: ".jpg", url: image, user: {}},
-      {type: ".mp4", url: video, user: {}}
-    ],
-    "Science": [
-      {type: ".mp4", url: video, user: {}},
-      {type: ".jpg", url: image, user: {}}
-    ],
-    "Literature": [
-      {type: ".mp3", url: song, user: {}},
-      {type: ".pdf", url: pdf, user: {}}
-    ]
-  }
+  media: []
 };
 
 export default function(state = initialState, action){
   switch(action.type){
-    case 'GET_UPLOADS':
+    case 'GET_CATEGORIES':
       return {
         ...state,
-        uploads: [...state.uploads, ...action.payload ]
+        media: action.payload
       }
     case 'ADD_UPLOAD':
       return {

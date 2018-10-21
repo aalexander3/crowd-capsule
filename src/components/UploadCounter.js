@@ -10,9 +10,15 @@ const UploadCounter = props => {
   )
 }
 
+const reduceCount = (state) => {
+  return state.root.media.reduce((acc, val) => {
+    return (acc + val.uploads.length)
+  }, 0)
+}
+
 const mapStateToProps = state => {
   return {
-    count: state.root.uploads.length
+    count: reduceCount(state)
   }
 }
 
