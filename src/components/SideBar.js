@@ -1,7 +1,5 @@
-import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
-import AboutEarth from './AboutEarth';
-import Upload from './Upload';
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class SideBar extends Component {
 
@@ -12,10 +10,8 @@ state = {
     console.log('sidebar')
     return (
       <div className="sidebar_container">
-        <h1>TEST A THING</h1>
-        <Link to={ Upload }>Upload</Link>
-        <Link to={ AboutEarth }>About Earth</Link>
-        <Link to={ Map }>Map</Link>
+        <Link to="/upload">Upload</Link>
+        <Link to="/aboutearth">About Earth</Link>
       </div>
     );
   }
