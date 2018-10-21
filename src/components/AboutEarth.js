@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import Map from './Map'
 class AboutEarth extends Component {
 
   render () {
@@ -15,6 +15,7 @@ class AboutEarth extends Component {
       <p>
         Maecenas sed diam eget risus varius blandit sit amet non magna. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Aenean lacinia bibendum nulla sed consectetur. Nullam quis risus eget urna mollis ornare vel eu leo.
       </p>
+      <Map/>
     </div>
   )
   }
