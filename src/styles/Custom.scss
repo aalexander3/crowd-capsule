@@ -231,15 +231,15 @@ i.cloud.upload.icon {
   top: 10vh; left: 30vw; right: 20vw;
 
   video {
-    height: 65vh;
+    width: 55vw;
   }
 }
 
 #close-button{
   font-size: 20px;
-  position: absolute;
-  left: 30vw; bottom: 10vh;
-  height: 70px; width: 300px;
+  position: relative;
+  height: 7vh; width: 55vw;
+  border: 2px solid $black;
   border-radius: 5px;
 }
 

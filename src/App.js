@@ -9,7 +9,6 @@ import { Route, Switch } from 'react-router-dom'
 import { withRouter } from 'react-router'
 import { getUploads } from './actions/Actions'
 import FeedModal from './components/FeedModal'
-import CloseButton from './components/CloseButton'
 
 class App extends Component {
   componentDidMount(){
@@ -27,7 +26,6 @@ class App extends Component {
                 <Route exact path="/upload" render={() => <Upload {...this.props} /> }/>
               </Switch>
             </div>
-            {this.props.feedModalVisible ? <CloseButton/> : ""}
             {this.props.feedModalVisible ? <FeedModal/> : ""}
         </div>
     )
