@@ -1,18 +1,19 @@
 import video from '../samples/small.mp4';
 import song from '../samples/prayer.mp3'
 import pdf from '../samples/pdf.pdf'
+import image from '../samples/image.jpg'
 const GET_DATA = "GET_DATA"
 
 const initialState = {
   items: [],
   media: {
     "Art": [
-      {type: ".jpg", url: "https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492_1280.jpg", user: {}},
+      {type: ".jpg", url: image, user: {}},
       {type: ".mp4", url: video, user: {}}
     ],
     "Science": [
       {type: ".mp4", url: video, user: {}},
-      {type: ".png", url: "https://cdn.pixabay.com/photo/2017/02/20/18/03/cat-2083492_1280.jpg", user: {}}
+      {type: ".jpg", url: image, user: {}}
     ],
     "Literature": [
       {type: ".mp3", url: song, user: {}},
