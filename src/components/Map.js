@@ -32,7 +32,6 @@ class Map extends Component {
   cityScale = scaleLinear().domain([0,this.state.highestCount+1]).range([1,4])
 
   render() {
-    console.log(this.state);
     return (
       <div style={wrapperStyles}>
         <ComposableMap
@@ -80,7 +79,7 @@ class Map extends Component {
               {
                 this.state.cities.map((city, i) => (
                   <Marker key={i} marker={city}>
-                    <circle
+                    <circle onMouseEnter={() => this.props.hover(city)} onMouseLeave={this.props.leave}
                       cx={0}
                       cy={0}
                       r={this.cityScale(city.count)}
