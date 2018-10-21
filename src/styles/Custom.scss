@@ -1,4 +1,4 @@
-@import '~antd/dist/antd.css';
+// @import '~antd/dist/antd.css';
 // COLOR SCHEME
 
 $blue: #669AA5;
@@ -17,10 +17,6 @@ body {
   display: grid;
   grid-template-columns: 25vw 75vw;
   grid-template-rows: 8vh 92vh;
-}
-
-canvas {
-  max-width: 250px;
 }
 
 .sidebar-container {
@@ -143,7 +139,11 @@ i.cloud.upload.icon {
 
 // =========== FEED =============
 
-.video-thumbnail {
+canvas {
+  max-width: 250px;
+}
+
+.video-audio-thumbnail {
   position: relative;
   display: inline-block;
   cursor: pointer;

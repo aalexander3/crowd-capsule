@@ -4,14 +4,17 @@ import {connect} from 'react-redux';
 
 class Feed extends Component {
 
-  render(){
-    const mediaRows = this.props.categories.map((category) => {
+  mediaRows = () => {
+    return this.props.categories.map((category) => {
       return <MediaRow key={category} category={category}/>
     })
+  }
+
+  render(){
 
     return (
       <Fragment>
-        {mediaRows}
+        {this.mediaRows()}
       </Fragment>
     )
   }
@@ -19,7 +22,7 @@ class Feed extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    categories: ["Art", "Science", "Literature"]
+    categories: Object.keys(state.root.media)
   }
 }
 

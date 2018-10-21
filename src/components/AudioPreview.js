@@ -22,7 +22,7 @@ class AudioPreview extends Component {
 
   render() {
     return (
-      <div>
+      <div className={ this.state.hover ? "" : "video-audio-thumbnail"}>
         <img height="150" width="250" src={image} onMouseEnter={this.handleHover} onMouseLeave={this.handleHover}/>
         <audio src={this.props.url} ref={(audio) => { this.audio = audio } }/>
       </div>
