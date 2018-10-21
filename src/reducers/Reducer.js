@@ -7,7 +7,7 @@ import {HANDLE_FEED_CLICK, GET_DATA} from '../actions/types.js';
 
 const initialState = {
   items: [],
-  feedModalVisible: false,
+  feedModalVisible: null,
   media: {
     "Art": [
       {type: ".jpg", url: image, user: {}},

@@ -1,11 +1,20 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
 
 class FeedModal extends Component {
   render(){
     return (
-      <div id="feed-modal">"This is the modal"</div>
+      <div id="feed-modal">
+        <video controls autoPlay src={this.props.url}/>
+      </div>
     )
   }
 }
 
-export default FeedModal;
+const mapStateToProps = (state) => {
+  return {
+    url: state.root.feedModalVisible
+  }
+}
+
+export default connect(mapStateToProps)(FeedModal);

@@ -10,9 +10,9 @@ export const getItems = (dispatch) => {
     }));
 }
 
-export const feedModalVisible = () => {
+export const feedModalVisible = (url) => {
   return {
     type: HANDLE_FEED_CLICK,
-    payload: true
+    payload: url
   }
 }

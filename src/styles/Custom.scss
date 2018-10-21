@@ -6,18 +6,21 @@ $hover: #4A7F89;
 $yellow: #FFE266;
 $white: #F6F7F4;
 $green: #90B27B;
+$black: #000000;
 
 // =========================
 
 body {
   font-family: helvetica;
 }
+
 .no-overflow {
   margin: 0; height: 100%; overflow: hidden;
   grid-column: 2;
   grid-row: 1/3;
   padding: 50px;
-  background: $white;
+  background: $black;
+  opacity: 0.1;
 }
 
 .app {
@@ -181,4 +184,8 @@ canvas {
 
 #feed-modal {
   position: absolute;
+  top: 20vh; left: 30vw; right: 20vw;
+  video {
+    height: 55vh;
+  }
 }

@@ -27,12 +27,12 @@ class VideoPreview extends Component {
 
   handleClick = (event) => {
     this.video.pause();
-    this.props.sendClick();
+    this.props.sendClick(this.props.url);
   }
 
   render() {
     return (
-      <div className={ this.state.hover ? "" : "video-audio-thumbnail"}>
+      <div className={ this.props.modalClicked || this.state.hover ? "" : "video-audio-thumbnail" }>
         <video width="250" height="250" src={this.props.url} ref={(video) => { this.video = video } }
         onMouseEnter={this.handleHover} onMouseLeave={this.handleHover}
         onClick={this.handleClick}/>
@@ -47,7 +47,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    sendClick: () => dispatch(feedModalVisible())
+    sendClick: (url) => dispatch(feedModalVisible(url))
   }
 }
 

@@ -14,8 +14,8 @@ class App extends Component {
 
         <div className="app">
           <SideBar />
+          {this.props.feedModalVisible ? <FeedModal/> : ""}
             <div className={this.props.feedModalVisible ? "no-overflow" : "main-page"}>
-              {this.props.feedModalVisible ? <FeedModal/> : ""}
               <Switch>
                 <Route exact path="/" exact component={ Feed }/>
                 <Route exact path="/about-earth" component={ AboutEarth }/>
