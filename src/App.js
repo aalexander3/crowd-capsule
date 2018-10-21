@@ -3,7 +3,6 @@ import './styles/Custom.scss'
 import { Provider } from 'react-redux'
 import AboutEarth from './components/AboutEarth'
 import Upload from './components/Upload'
-import Nav from './components/Nav'
 import SideBar from './components/SideBar'
 import Feed from './components/Feed'
 import store from './store'
@@ -14,7 +13,6 @@ class App extends Component {
     return (
       <Provider store={store}>
         <div className="app">
-          <Nav />
           <SideBar />
           <div className="main-page">
             <Switch>
