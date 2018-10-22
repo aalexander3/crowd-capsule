@@ -23,7 +23,6 @@ class Feed extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    feedModalVisible: state.root.feedModalVisible,
     categories: Object.keys(state.root.media)
   }
 }
