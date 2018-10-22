@@ -16,8 +16,8 @@ const jsonify = res => res.json()
 
 export const UploadAdapter = {
   index: () => fetch(BASE_URL+"uploads").then(jsonify),
-  post: (body) => fetch(BASE_URL, config("POST", body)).then(jsonify),
-  upvote: (id) => fetch(`${BASE_URL}/${id}`, config("PATCH", JSON.stringify({upvote: 1}))).then(jsonify)
+  post: (body) => fetch(BASE_URL+'uploads', config("POST", body)).then(jsonify),
+  upvote: (id) => fetch(`${BASE_URL}uploads/${id}`, config("PATCH", JSON.stringify({upvote: 1}))).then(jsonify)
 }
 
 

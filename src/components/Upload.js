@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Icon, Input } from 'antd';
 import { connect } from 'react-redux'
 
-import { getUploads, postUploads } from '../actions/Actions'
+import { postUploads } from '../actions/Actions'
 
 
 class Uploader extends Component {

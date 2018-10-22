@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Map from './Map'
 import About from './About'
-import LocationUploads from './LocationUploads'
+import MediaRow from './MediaRow'
 
 class AboutEarth extends Component {
 
@@ -10,21 +10,30 @@ class AboutEarth extends Component {
   }
 
   hover = (location) => {
-    console.log(location);
     this.setState({location: location})
   }
 
-  // leave = () => {
-  //   this.setState({ location: {} })
-  // }
+  leave = () => {
+    this.setState({ location: {} })
+  }
+
+  renderRow = () => {
+    return(
+      <div>
+        <MediaRow category={this.state.location} />
+        <br/>
+        <button className="submit" onClick={this.leave}>Back to Earth</button>
+      </div>
+    )
+  }
 
   render () {
     return (
     <div>
-      <div className="earth-paragraph">
-        {this.state.location.id ? <LocationUploads /> : <About/>}
-      </div>
       <Map hover={this.hover} />
+      <div className="earth-paragraph">
+        {this.state.location.id ? this.renderRow(): <About/>}
+      </div>
     </div>
   )
   }

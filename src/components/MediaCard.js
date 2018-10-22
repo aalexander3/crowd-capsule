@@ -1,18 +1,21 @@
 import React, {Component} from 'react'
+import { connect } from 'react-redux'
 import AudioPreview from './Previews/AudioPreview'
 import ImagePreview from './Previews/ImagePreview'
 import VideoPreview from './Previews/VideoPreview'
 
+import { updateUpvote, feedModalVisible } from '../actions/Actions'
+
 class MediaCard extends Component {
 
-  state = {
-    likeCount: 0
+  handleClick = (id) => {
+    this.props.updateUpvote(id).then(console.log)
   }
 
-
-  handleClick = (url) => {
-
+  handleMediaClick = () => {
+    this.props.feedModalVisible(this.props.upload.path, this.props.mediaType);
   }
+
 
   renderSwitch = (type, url) => {
     switch(type){
@@ -30,21 +33,23 @@ class MediaCard extends Component {
     }
   }
 
-
   render() {
-    const {mediaUrl, mediaType } = this.props
+    const { mediaType } = this.props
+    const { path, upvotes, location_name, id} = this.props.upload
     return (
       <div className="media-card">
-        {this.renderSwitch(mediaType, mediaUrl)}
+        <div onClick={this.handleMediaClick}>
+          {this.renderSwitch(mediaType, path)}
+        </div>
         <div className="data-container">
-          <h1>From Germany</h1>
+          <h1>From {location_name}</h1>
           <h2>October 21,2018</h2>
         </div>
         <div className="like-count-container">
-          <a onClick={() => this.handleClick(mediaUrl)} >
-            <img src="heart.svg"/>
+          <a onClick={() => this.handleClick(id)} >
+            <img src="heart.svg" alt='heart icon'/>
           </a>
-          <span>33</span>
+          <span>{upvotes}</span>
         </div>
       </div>
     )
@@ -53,4 +58,4 @@ class MediaCard extends Component {
 
 }
 
-export default MediaCard;
+export default connect(null, { updateUpvote, feedModalVisible })(MediaCard);
