@@ -176,17 +176,34 @@ i.cloud.upload.icon {
 
 #feed-modal {
   position: absolute;
-  top: 20vh;
+  top: 10vh;
   left: 30vw;
   right: 20vw; }
-  #feed-modal video {
-    height: 55vh; }
+  #feed-modal video, #feed-modal image {
+    width: 60vw; }
+  #feed-modal audio {
+    width: 55vw;
+    margin-top: 30vh; }
+  #feed-modal img {
+    max-height: 50vh;
+    margin-left: 7vw; }
+  #feed-modal p {
+    font-size: 50px; }
+
+#close-button {
+  position: fixed;
+  top: 1vw;
+  right: 1vw;
+  height: 10vh;
+  border-radius: 5px;
+  border: 2px solid #000000; }
 
 .mediacard-container {
   display: flex;
   flex-direction: row;
-  height: 30vh;
-  overflow-x: scroll; }
+  height: 36vh;
+  overflow-x: scroll;
+  padding: 2vh 2vw; }
   .mediacard-container div {
     display: inline-block; }
 
@@ -196,7 +213,10 @@ i.cloud.upload.icon {
 .media-card {
   width: 250px;
   margin: 0 1.5rem;
-  background-color: white; }
+  background-color: white;
+  -webkit-box-shadow: -2px 3px 36px -12px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -2px 3px 36px -12px rgba(0, 0, 0, 0.75);
+  box-shadow: -2px 3px 36px -12px rgba(0, 0, 0, 0.75); }
 
 .data-container {
   padding: 10px;

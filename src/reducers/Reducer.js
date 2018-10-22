@@ -1,28 +1,4 @@
-import video from '../samples/small.mp4';
-import song from '../samples/prayer.mp3'
-import pdf from '../samples/pdf.pdf'
-import image from '../samples/image.jpg'
-import {HANDLE_FEED_CLICK, GET_DATA} from '../actions/types.js';
-
-// Space Art Music Math Science Literature Technology
-// media looks kinda like this [
-//   {
-//     "id": 1,
-//     "name": "Space",
-//     "uploads": [
-//       {
-//         "id": 3,
-//         "path": "https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e000763/GSFC_20171208_Archive_e000763~orig.jpg",
-//         "upvotes": 0,
-//         "location_id": 26,
-//         "user": {
-//           "id": 1,
-//           "username": "Admin"
-//         }
-//       },
-//       {...}
-// ]
-
+import { HANDLE_FEED_CLICK, HANDLE_CLOSE_CLICK } from '../actions/types.js';
 
 const initialState = {
   uploads: [],
@@ -42,11 +18,31 @@ export default function(state = initialState, action){
         ...state,
         uploads: [...state.uploads, action.payload]
       }
-    case HANDLE_FEED_CLICK:
+    case 'UPDATE_UPLOAD':
+      let new_media = state.media.map(categ => {
+        let new_cat = categ.uploads.map(up => {
+          if (up.id === action.payload.id) {
+            return action.payload
+          } else {
+            return up
+          }
+        })
+        return {...categ, uploads: new_cat}
+      })
       return {
         ...state,
-        feedModalVisible: action.payload
+        media: new_media
       }
+    case HANDLE_FEED_CLICK:
+       return {
+         ...state,
+         feedModalVisible: action.payload
+       }
+   case HANDLE_CLOSE_CLICK:
+     return {
+       ...state,
+       feedModalVisible: action.payload
+     }
     default:
       return state;
   }

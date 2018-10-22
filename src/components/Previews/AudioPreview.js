@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import image from '../../samples/audio.png'
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 
 class AudioPreview extends Component {
   state = {
@@ -23,17 +23,16 @@ class AudioPreview extends Component {
       }
     })
   }
-  //
-  // audioOrVideo = () => {
-  //   if(this.props.type === ".mp3"){
-  //
-  //   }
-  // }
+
+  handleClick = () => {
+    this.audio.pause()
+  }
 
   render() {
     return (
       <div className={ this.props.modalClicked || this.state.hover ? "" : "video-audio-thumbnail" }>
-        <img height="150" width="250" src={image} onMouseEnter={this.handleHover} onMouseLeave={this.handleHover}/>
+        <img height="150" width="250" src={image} alt="audio" onMouseEnter={this.handleHover} onMouseLeave={this.handleHover}
+        onClick={this.handleClick}/>
         <audio src={this.props.url} ref={(audio) => { this.audio = audio } }/>
       </div>
     )

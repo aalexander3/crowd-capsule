@@ -1,6 +1,5 @@
 import React, {Component, Fragment} from 'react';
 import MediaRow from './MediaRow';
-import FeedModal from './FeedModal'
 import {connect} from 'react-redux';
 
 class Feed extends Component {

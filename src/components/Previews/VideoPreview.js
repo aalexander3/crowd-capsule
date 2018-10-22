@@ -1,7 +1,5 @@
-import React, {Component} from 'react';
-import playButton from '../../samples/play_button.png';
-import {connect} from 'react-redux';
-import { feedModalVisible } from '../../actions/Actions';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 class VideoPreview extends Component {
   state = {
@@ -25,17 +23,11 @@ class VideoPreview extends Component {
     })
   }
 
-  handleClick = (event) => {
-    this.video.pause();
-    this.props.sendClick(this.props.url);
-  }
-
   render() {
     return (
       <div className={ this.props.modalClicked || this.state.hover ? "" : "video-audio-thumbnail" }>
         <video width="250" height="150" src={this.props.url} ref={(video) => { this.video = video } }
-          onMouseEnter={this.handleHover} onMouseLeave={this.handleHover}
-          onClick={this.handleClick}/>
+          onMouseEnter={this.handleHover} onMouseLeave={this.handleHover}/>
       </div>
     )
   }
@@ -45,10 +37,4 @@ const mapStateToProps = (state) => {
   return { modalClicked: state.root.feedModalVisible }
 }
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    sendClick: (url) => dispatch(feedModalVisible(url))
-  }
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(VideoPreview);
+export default connect(mapStateToProps)(VideoPreview);

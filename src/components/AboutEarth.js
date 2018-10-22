@@ -30,10 +30,10 @@ class AboutEarth extends Component {
   render () {
     return (
     <div>
+      <Map hover={this.hover} />
       <div className="earth-paragraph">
         {this.state.location.id ? this.renderRow(): <About/>}
       </div>
-      <Map hover={this.hover} />
     </div>
   )
   }

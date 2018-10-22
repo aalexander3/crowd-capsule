@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './styles/Custom.scss'
-import { Provider, connect } from 'react-redux'
+import { connect } from 'react-redux'
 import AboutEarth from './components/AboutEarth'
 import Upload from './components/Upload'
 import SideBar from './components/SideBar'
@@ -20,18 +20,20 @@ class App extends Component {
 
         <div className="app">
           <SideBar />
-          {this.props.feedModalVisible ? <FeedModal/> : ""}
-            <div className={this.props.feedModalVisible ? "no-overflow" : "main-page"}>
+          <div className={this.props.feedModalVisible ? "no-overflow" : "main-page"}>
+            {this.props.feedModalVisible ? <FeedModal/> : ""}
               <Switch>
-                <Route exact path="/" exact component={ Feed }/>
+                <Route exact path="/" component={ Feed }/>
                 <Route exact path="/about-earth" component={ AboutEarth }/>
                 <Route exact path="/upload" render={() => <Upload {...this.props} /> }/>
               </Switch>
             </div>
+          {this.props.feedModalVisible ? <FeedModal/> : ""}
         </div>
     )
   }
 }
+
 const mapStateToProps = (state) => {
   return {
     feedModalVisible: state.root.feedModalVisible,
